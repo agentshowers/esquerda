@@ -1,0 +1,66 @@
+<!doctype html>
+
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<title>A esquerda já quebrou o acordo?</title>
+	<meta name="author" content="AgentShowers">
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../styles/base.css">
+	<link rel="stylesheet" href="../styles/natal.css">
+	<link rel="stylesheet" href="braga.css">
+	
+	<script src="../scripts/timer.js"></script>
+	<script src="braga.js"></script>
+	<script>
+		
+	</script>
+</head>
+
+<body>
+	<audio id = "player" loop autoplay>
+		<source src="braga.mp3" type="audio/mpeg">
+		<source src="braga.ogg" type="audio/ogg">
+	</audio>
+	
+	<audio id = "player_golo" loop>
+		<source src="golodobraga.ogg" type="audio/ogg">
+	</audio>
+	
+	<audio id = "player_entras" loop>
+		<source src="quandoentras.mp3" type="audio/mpeg">
+		<source src="quandoentras.ogg" type="audio/ogg">
+	</audio>
+	
+	<audio id = "player_sofro" loop>
+		<source src="seiquesofro.mp3" type="audio/mpeg">
+		<source src="seiquesofro.ogg" type="audio/ogg">
+	</audio>
+	
+	<div id="mute">
+		<button id="muteButton" onclick="muteToggle()">
+			<img id="imgMute" src="../images/unmute.png">
+		</button>
+	</div>
+	
+	<div id="textContainer">
+		NÃO!
+	</div>
+	
+	<div id="clockContainer">
+		António Costa é Primeiro-Ministro há: <div id="counter"></div>
+	</div>
+	
+	<div class="image-left">
+		<img id="Jeronimo" src="jeronimo.png" onclick=playSong('player_golo')>
+	</div>
+	<div class="image-center">
+		<img id="Costa" src="costa.png" onclick=playSong('player_entras')>
+	</div>
+	<div class="image-right">
+		<img id="Catarina" src="amelia.png" onclick=playSong('player_sofro')>
+	</div>
+
+</body>
+</html>

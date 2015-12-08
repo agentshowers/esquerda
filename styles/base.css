@@ -1,0 +1,58 @@
+html{
+	height:100%;
+	min-height:100%;
+}
+body {
+	text-align: center;
+	background-image: url("../images/assembleia.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+	font-family: 'Roboto', sans-serif;
+}
+
+#textContainer {
+	margin-top: 25px;
+	font-size: 8vw;
+}
+
+#clockContainer {
+	margin-top: 5px;
+	font-size: 3em;
+}
+
+img {
+	width: 80%;
+}
+
+.images {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.image-left {
+	position:fixed;
+	left: 0;
+	bottom: 0;
+	width: 33%;
+}
+
+.image-right {
+	position:fixed;
+	right: 0;
+	bottom: 0;
+	width: 33%;
+}
+
+.image-center {
+	position:fixed;
+	bottom: 0;
+	right: 33%;
+	width: 33%;
+}
+
+.image-center > img {
+	width: 70%;
+}

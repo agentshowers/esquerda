@@ -1,0 +1,53 @@
+<!doctype html>
+
+<html lang="pt">
+<head>
+	<meta charset="utf-8">
+	<title>A esquerda já quebrou o acordo?</title>
+	<meta name="author" content="AgentShowers">
+	
+	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="styles/base.css">
+	<link rel="stylesheet" href="styles/natal.css">
+	
+	<script src="scripts/timer.js"> </script>
+	<script src="scripts/snowstorm.js"></script>
+	<script src="scripts/audio.js"></script>
+	<script>
+		snowStorm.followMouse = false;
+		snowStorm.excludeMobile = false;
+	</script>
+</head>
+
+<body>
+	<audio id = "player" loop autoplay>
+	  <source src="audio/winterbells.mp3" type="audio/mpeg">
+	  <source src="audio/winterbells.ogg" type="audio/ogg">
+	</audio>
+	
+	<div id="mute">
+		<button id="muteButton" onclick="muteToggle()">
+			<img id="imgMute" src="images/unmute.png">
+		</button>
+	</div>
+	
+	<div id="textContainer">
+		NÃO!
+	</div>
+	
+	<div id="clockContainer">
+		António Costa é Primeiro-Ministro há: <div id="counter"></div>
+	</div>
+	
+	<div class="image-left">
+		<img id="Jeronimo" src="images/jeronimo_natal.png">
+	</div>
+	<div class="image-center">
+		<img id="Costa" src="images/costa_natal.png">
+	</div>
+	<div class="image-right">
+		<img id="Catarina" src="images/catarina_natal.png">
+	</div>
+
+</body>
+</html>
