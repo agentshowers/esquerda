@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<!-- saved from url=(0057)http://agentshowers.github.io/esquerda/cartaocidadao.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <title>Cartão Cidadão</title>	
 	<script>
 		function digitoControloBI (cc) {
@@ -9,7 +9,7 @@
 			for (var i=cc.length-1,j=2;i>=0;i--,j++){
 				sum += parseInt(cc[i])*j;
 			}
-			if (sum%11 == 1){ //bug in CC code calculation, 10 is shown as 0
+			if (sum%11 == 0 || sum%11 == 1){ //bug in CC code calculation, 10 is shown as 0
 				return 0;
 			}
 			return 11 - (sum%11);
@@ -33,7 +33,9 @@
 				}
 				sum += valueToSum - (valueToSum >= 10 ? 9 : 0);
 			}
-			
+			if (sum %10 == 0) {
+				return 0;
+			}
 			return 10 - (sum%10);
 		}
 
@@ -91,17 +93,17 @@
 	</script>
   </head>
   <body>
-	Número do CC: <input id="numerocartao"><br>
+	Número do CC: <input id="numerocartao" style="box-shadow: 0px 0px 0px;"><br>
 	Número de renovações (deixar a 1): 
 	<select id="selectrenovacoes">
 		<option>0</option>
-		<option selected>1</option>
+		<option selected="">1</option>
 		<option>2</option>
 		<option>3</option>
 		<option>4</option>
 		<option>5</option>
 	</select> <br>
 	<input type="submit" value="Calcular" onclick="calcularCC()"><br>
-	<div id="result"></div>
-  </body>
-</html>
+	<div id="result">Número completo: 198106695 11ZY5</div>
+  
+</body></html>
